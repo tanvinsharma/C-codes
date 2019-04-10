@@ -1,0 +1,8 @@
+This doc contains update on the game source code.
+Majje karo 
+
+Syntax- Date-Status
+
+Dec26-18-03:34  ->  Placement phase complete ( gand mardi errors ne )
+                ->  Tried to do the give id shit...didnt end well :(
+                

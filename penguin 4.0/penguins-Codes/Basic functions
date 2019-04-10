@@ -1,0 +1,114 @@
+#include <stdio.h>
+
+#include <any other self made header files required to run the game>
+
+// basic structure for a penguin
+
+struct penguin{
+
+    int peng_ID; //ID of the penguin
+    int x,y;     //coordinates of the penguin
+    int no_fish;
+
+}
+
+//We will declare and use this structure in the whole game while inputing data and using them
+
+int make_file(){
+    FILE *file;
+    // file with player ID,number of penguins of each player and number of collected fish of each player.
+    file = fopen("OURFILE.txt",<entered data>);
+    fclose(file);
+    return 0;
+}
+
+int board_info(){
+    //will recieve data for board 
+      printf("Data about dimension of the board");
+    scanf("%d %d",&x, &y); //Enters the x and y coordinate of the boards giving us the dimensions
+
+    printf("Uploading initial map",map());
+
+    return 0;
+}
+
+//this is unnecessary 
+/*
+int make_board(int length,int breadth){
+
+    //this function takes length and breadth as its input and makes a grid
+
+    for(int i=0;i<length;i++){
+
+        for(int j=0;j<breadth;j++){
+
+        printf("|__");
+    }
+        printf("|");
+        printf("\n");
+    }
+
+}
+*/ 
+
+/*
+This is how the grid would look like
+The ID of the player and fishes will be shown in all the boxes we can see on the board replica.
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+|__|__|__|__|__|__|__|__|__|__|
+*/
+
+    // also the data recieved about 
+
+
+
+int placement_peng(){
+    scanf(<Input data about number of penguins>);
+    if(<Number of penguins is bigger than number of tiles on map){
+        
+        return 2; //returns game state error and also additional message will be displayed
+    }
+    else{
+        board_info();    //Will input information for the making of the board 
+    }
+    // Now we choose a tile to put penguin on it
+    //N - number of penguins of each player remaining.
+
+    while(N!=0 && N>0){
+        printf("Choose a tile where you want to put penguin on");
+        if(<Number of fish on a chosen tile == 1>){
+
+            // If number of fish equals to 1, we put penguin on tile and in our text file we subtract 1 penguin and add 1 fish to the player's data
+            
+            printf("You have chosen the right place",file());
+        }
+        else{
+            printf("Try again and choose another tile!");
+        }
+    }
+}
+
+int movement_peng(){
+    do{
+        // If penguin can move we delete him from the tile where he was and add this penguin to the coordinate which we have chosen.
+        printf("Moving penguin on the board and collecting fish",map(),file());
+    }
+    while("Penguin can move"){
+
+        // the penguins will move and get fish. 
+    }
+
+    if("Penguin can not move"){
+
+        return 1; //error returned when the program cannot move furthur.
+    }
+}
+

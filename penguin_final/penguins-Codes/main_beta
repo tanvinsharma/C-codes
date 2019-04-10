@@ -1,0 +1,26 @@
+// the main funciton will have the parameters as per the requirements.
+
+int main(int argc,const char *argv[]){
+
+    printf("WELCOME TO "PENGUINS" ");
+    
+    if(argv==1)                    //i.e no other parameters added while calling main
+    //LAUNCH INTERACITVE MODE AUTOMATICALLY 
+    
+    else{
+
+    printf("Enter no of players and their names ?");
+    scanf("&d &d",&no,&Player_ID);
+
+    printf("Putting data about players in file",file(no,Player_ID));
+
+    printf("How many penguins for each player?");
+    scanf("%d",&Nopeng);
+
+    printf("Putting data about penguins in file",file(Nopeng));
+
+    // loops for placement and movement of penguins.
+    
+        return 0;
+    }
+}

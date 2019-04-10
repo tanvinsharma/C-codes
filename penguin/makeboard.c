@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+//first parameter is for rows or m
+//second parameter is for columns or n
+
+int main(int argc, char *argv[]) {
+	const char *filename = "Board.txt";
+	int row = atoi(argv[1]);
+	int cols = atoi(argv[2]);
+
+	int random_fish = 0;
+
+	srand(time(NULL)); // seeding random function 
+
+	FILE *map = fopen(filename, "w+");
+
+	// write row 1 with row and cols
+	fprintf(map, "%d %d\n", row, cols);
+	// write rest of the map
+
+	for (int i = 0; i < row; ++i) {
+
+		for (int j = 0; j < cols; ++j) {
+
+			random_fish = rand() % (3) + 1;
+			fprintf(map, "%d0 ", random_fish);
+		}
+
+		fprintf(map, "\n");
+	}
+// player detail table will be added while making the placement phase.
+	fclose(map);
+	return 0;
+}
